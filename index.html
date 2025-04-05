@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Dragon - Купить Голду</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Логотип (Только текст) -->
+  <div class="logo">
+    <span class="logo-text">Golden Dragon</span>
+  </div>
+
+  <!-- Кнопка "Поддержка" -->
+  <a href="https://t.me/Maxim_Compilator" class="support-btn" target="_blank">Поддержка</a>
+
+  <!-- Контейнер с формой -->
+  <div class="page active">
+    <div class="container">
+      <h1>Купить Голду</h1>
+      <div class="info">Курс: 1 рубль = 2.5 голды</div>
+      <input type="number" id="goldAmount" class="input" placeholder="Введите количество голды" />
+      <button class="btn" onclick="calculatePrice()">Купить</button>
+      <div id="price" style="display:none; margin-top: 20px;"></div>
+      <div id="error-message" class="error-message"></div>
+    </div>
+  </div>
+
+  <!-- Страница с инструкцией по оплате -->
+  <div class="page" id="paymentPage">
+    <div class="container">
+      <h1>Инструкция по оплате</h1>
+      <p>Переведите деньги на карту: <strong>1111 2222 3333 4444</strong></p>
+      <p>После перевода нажмите "Проверить оплату".</p>
+
+      <!-- Сумма к оплате -->
+      <p id="paymentAmount" style="font-size: 16px; color: #ddd; margin-top: 10px;"></p>
+
+      <input type="text" id="cardNumber" class="input" placeholder="Введите номер вашей карты" />
+      <button class="btn" onclick="checkPayment()">Проверить оплату</button>
+
+      <div id="paymentError" class="error-message" style="display:none;">
+        Оплата не найдена, обратитесь в поддержку
+      </div>
+
+      <!-- Блок с ссылкой на поддержку -->
+      <div class="support-hint">
+        Если у вас другие способы оплаты — 
+        <a href="https://t.me/Maxim_Compilator" target="_blank">напишите в поддержку</a>.
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
